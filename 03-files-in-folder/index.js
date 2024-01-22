@@ -23,7 +23,7 @@ fs.readdir(dirPath, { withFileTypes: true }, (err, files) => {
         const extFile = path.join(file.path, file.name);
         const stats = fs.statSync(extFile);
         const size = stats.size;
-        console.log(`file name: ${file.name.replace(path.extname(extFile), '')};  extension: ${path.extname(extFile).slice(1)};  size: ${size}`); 
+        console.log(`${file.name.replace(path.extname(extFile), '')} - ${path.extname(extFile).slice(1)} - ${size}`); 
       }
     }) 
   } 
